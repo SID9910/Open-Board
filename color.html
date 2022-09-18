@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* it applies to all the div */
+  /* *{
+    border: 1px solid red;
+  } */
+
+  div{
+    border: 1px solid green;
+    /* background-color: lightcoral; */
+  }
+  .outer{
+    border: 3px solid purple;
+    width:200px;
+height:50px;
+display: flex;
+/* horizontal align */
+justify-content: space-evenly;
+align-items: center;
+  }
+  .red{
+background-color: red;
+width:35px;
+height:35px;
+border-radius: 50%;
+  }
+  .green{
+background-color:  lightgreen;
+width:35px;
+height:35px;
+border-radius: 50%;
+  }
+  .blue{
+    background-color: lightskyblue;
+    width:35px;
+height:35px;
+border-radius: 50%;
+  }
+  
+  body{
+    border:1px solid rgb(29, 29, 31);
+  }
+  html{
+    border: 1px solid grey;
+  }
+  .color-area{
+    border:1px solid grey;
+    height:100px;
+    width:100px;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+    </style>
+</head>
+<body>
+    <div class ="outer">
+    <div class ="red"> red</div>
+    <div class ="green">green</div>
+    <div class ="blue"> blue</div>
+    </div>
+    <!-- color area -->
+    <div class ="color-area"></div>
+    <script>
+        //button -> click-> color
+         let colorArea = document.querySelector(".color-area");
+         let redcolor =document.querySelector(".red");
+          let greencolor =document.querySelector(".green");
+          let bluecolor =document.querySelector(".blue");
+          redcolor.addEventListener("click",function(){
+            colorArea.style.backgroundColor= "red";
+          })
+          greencolor.addEventListener("click",function(){
+            colorArea.style.backgroundColor="lightgreen";
+          })
+          bluecolor.addEventListener("click",function(){
+            colorArea.style.backgroundColor ="lightblue";
+          })
+          
+    </script>
+</body>
+</html>
